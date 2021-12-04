@@ -7,7 +7,7 @@ nums = nums.split(",");
 const boards = [];
 const marks = [];
 const won = [];
-let won_cnt = 0;
+let wonCnt = 0;
 for (const board of boardInput) {
   const boardLines = board.split("\n");
   boards.push([]);
@@ -69,12 +69,12 @@ for (const num of nums) {
     if (isWin(i)) {
       if (!won[i]) {
         won[i] = true;
-        won_cnt++;
-        if (won_cnt == 1) {
+        wonCnt++;
+        if (wonCnt == 1) {
           // part 1
           getAnswer(i, num);
         }
-        if (won_cnt == boards.length) {
+        if (wonCnt == boards.length) {
           // part 2
           getAnswer(i, num);
           found = true;
