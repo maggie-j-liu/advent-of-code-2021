@@ -6,8 +6,7 @@ let positions = input.split(",").map(Number);
 const triangle = (n) => (n * (n + 1)) / 2;
 let ans1 = 1e9;
 let ans2 = 1e9;
-const max = positions.reduce((a, b) => Math.max(a, b));
-for (let pos = 0; pos < max; pos++) {
+for (let pos = 0; pos < Math.max(...positions); pos++) {
   let cost1 = 0;
   let cost2 = 0;
   for (const x of positions) {
